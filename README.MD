@@ -2,6 +2,9 @@
 
 
 ## Description
+
+E-commerce web scraper built in python leveraging beautifulsoup4 as html parser. Purpose is to scrape product catalog metadata (name, unit price, label price) for online grocery stores.
+
 Assumptions:
 * The website to be scraped contains an search all item page with a pagination 
 highlighting the last page number available
