@@ -1,0 +1,6 @@
+.ipynb_checkpoints
+.idea
+*pycache*
+*.ipynb
+*DS_STORE
+*.json
