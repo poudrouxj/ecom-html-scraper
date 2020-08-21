@@ -41,7 +41,7 @@ product data. Once the scraping is complete it will dump the data to `../data/` 
 ### Modularity  & Configurability
 
 The configuration file contains both functional scraper settings (maximum number of requests, time between requests etc)
-, but also data target tags. The tags are generic CSS tags, but some keyword may be kolonial specific.
+, but also data target tags. The tags are generic CSS tags, but some keyword may be TARGET specific.
 ```json5
 {
   "REQUEST_HEADER": {
