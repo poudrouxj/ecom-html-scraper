@@ -14,7 +14,7 @@ if __name__ == "__main__":
         '--config_file',
         dest='config_file',
         type=str,
-        default=None,
+        default='config.json',
         help='config file',
     )
 
