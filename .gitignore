@@ -3,7 +3,5 @@
 *pycache*
 *.ipynb
 *DS_STORE
-*.json
 *.pyc
-*.json
 target.json
