@@ -4,3 +4,4 @@
 *.ipynb
 *DS_STORE
 *.json
+*.pyc
