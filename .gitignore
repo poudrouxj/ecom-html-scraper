@@ -3,9 +3,7 @@
 *pycache*
 *.ipynb
 *DS_STORE
-<<<<<<< HEAD
 *.json
 *.pyc
-=======
 *.json
->>>>>>> a98bffc38679bcb87aa59cc14533b06b47e7ce81
+target.json
