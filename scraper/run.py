@@ -35,9 +35,9 @@ class HTMLScraper:
         self.START_URL = None
         self.SEARCH_URL = None
         self.MAXIMUM_PAGE_NUMBERS = None
-        self.PRODUCT_CATEGORY_TAGS = None
-        self.PRODUCT_TAGS = None
-        self.PAGINATION_TAGS = None
+        self.PRODUCT_CATEGORY_TAGS = {}
+        self.PRODUCT_TAGS = {}
+        self.PAGINATION_TAGS = {}
 
         # Default SCRAPER initialization
         self.LIMIT_NUMBER_OF_REQUESTS = True
@@ -204,7 +204,7 @@ def run_scraper(args):
     number_of_categories = len(HS.PRODUCT_CATEGORY)
 
     #TODO: product item category count is not a unique count as not all categories are unique
-    number_of_products = sum([int(x) for x in HS.PRODUCT_CATEGORY_COUNT])
+    #number_of_products = sum([int(x) for x in HS.PRODUCT_CATEGORY_COUNT])
 
     print(f'Scraped first page and identified {number_of_categories} number of product categories')
 
