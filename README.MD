@@ -1,5 +1,5 @@
 # E-commerce web-scraper
-
+Hobby project mainly designed to learn additional libraries such as (`beautifulsoup4`, `fastapi`, `pydantic`, `pytest`) and more about containerization. 
 
 ## Description
 
@@ -13,7 +13,7 @@ highlighting the last page number available
 ## Local Execution
 To execute the locally scraper one can run the following command:
 ```bash
-python main.py --config_file target.json
+python main.py --config_file config.json --target_file target.json
 ```
 The scraper will first identify some product category data, then the number of pages to be scraped containing 
 product data. Once the scraping is complete it will dump the data to `../data/`  directory. 
@@ -25,13 +25,21 @@ product data. Once the scraping is complete it will dump the data to `../data/` 
 |   |   `-- 2020-08-13_products_target.json
 |   `-- run.py
 |-- README.MD
-|-- TARGET.json
+|-- config.json
+|-- target.json
 |-- main.py
 |-- requirements.txt
 `-- setup.py
 ```
 
+### TODOs:
+[1] Containerization with FastAPI + gunicorn (?)
+[2] Re-write HTMLParser object w.r. to pydantic type checking conventions
+[3] Add pytest / unittest
+[4] Extend data model (discounted, out of stock items)
 
+
+<!-- 
 ### Performance
 * To increase performance we can do asynchrounous requests (maybe use `grequest` f.i.)
 * To increase performance we can change backend engine on beautifulsoup4 from `html.parser` to `lxml` 
@@ -130,12 +138,4 @@ Different mechanisms can be implemented to ensure client server side is protecte
 * `beautifulsoup` : used for parsing html objects
 * `requests : used for generating http requests`
 * `re` : used for regex
- 
-
-## TODOs
-* Product items that (1) have a discount or (2) is unavailable is not currently scraped
-* Containerization of the application for ease of deployment to cloud
-* Deployment scripts
-* Application cli arguments (currently only config file)
-
-
+ !--> 
