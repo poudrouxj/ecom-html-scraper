@@ -33,10 +33,10 @@ product data. Once the scraping is complete it will dump the data to `../data/` 
 ```
 
 ### TODOs:
-[1] Containerization with FastAPI + gunicorn (?)
-[2] Re-write HTMLParser object w.r. to pydantic type checking conventions
-[3] Add pytest / unittest
-[4] Extend data model (discounted, out of stock items)
+* Containerization with FastAPI + gunicorn (?)
+* Re-write HTMLParser object w.r. to pydantic type checking conventions
+* Add pytest / unittest
+* Extend data model (discounted, out of stock items)
 
 
 <!-- 
