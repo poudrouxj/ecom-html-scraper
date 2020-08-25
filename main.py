@@ -16,7 +16,7 @@ if __name__ == "__main__":
         type=str,
         default='config.json',
         help='config file',
-        required=False
+        required=True
     )
 
     cli_parser.add_argument(
@@ -25,10 +25,19 @@ if __name__ == "__main__":
         dest='target_file',
         type=str,
         default='target.json',
-        help='Target specific URLs'
-        requred=True
+        help='Target specific URLs',
+        required=True
     )
 
+    cli_parser.add_argument(
+        '-l',
+        '--limit_request',
+        dest='LIMIT_NUMBER_OF_REQUESTS',
+        type=bool,
+        default=True,
+        help='Flag to limit requests',
+        required=False
+        )
 
     # parse known args doesnt throw exception when adding additional args
     args, unknown = cli_parser.parse_known_args()
@@ -40,6 +49,11 @@ if __name__ == "__main__":
             config = json.load(open(args.config_file))
             parser.set_defaults(**config)
 
+    if args.target_file is not None:
+        if '.json' in args.target_file:
+            target = json.load(open(args.target_file))
+            parser.set_defaults(**target)
+ 
     args = parser.parse_args()
 
     main(vars(args))

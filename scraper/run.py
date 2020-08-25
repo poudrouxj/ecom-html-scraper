@@ -72,6 +72,7 @@ class HTMLScraper:
     def get_last_page_number(self, soup: bs):
         """Find pagination part of a beautifulsoup object and return the last page number in string format."""
         result = soup.find_all(**self.PAGINATION_TAGS)[0].text.split()
+
         try:
             assert(len(result) != 0)
         except:
