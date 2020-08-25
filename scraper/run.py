@@ -26,6 +26,7 @@ Author: Jean-Michael Poudroux
 Date 2020-08-12
 """
 
+#TODO: Re-write HTMLscraper object to be aligned with fastapi + pydantic conventions of type annotated data model
 
 class HTMLScraper:
     def __init__(self, **kwargs):
